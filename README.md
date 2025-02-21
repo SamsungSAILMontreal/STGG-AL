@@ -86,11 +86,9 @@ print(props)
 
 To reproduce the examples from the paper, you can run examples from experiments/exps.sh. 
 
-```
-
 ## References
 
-If you find the code useful, please consider citing our work 
+If you find the code useful, please consider citing our work:
 ```bib
 @misc{jolicoeurmartineau2025activelearningstgg,
       title={Generating $\pi$-Functional Molecules Using STGG+ with Active Learning}, 
