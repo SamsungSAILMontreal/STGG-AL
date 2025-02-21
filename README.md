@@ -97,7 +97,7 @@ If you find the code useful, please consider citing our work
       title={Generating $\pi$-Functional Molecules Using STGG+ with Active Learning}, 
       author={Alexia Jolicoeur-Martineau and Yan Zhang and Boris Knyazev and Aristide Baratin and Cheng-Hao Liu},
       year={2025},
-      eprint={xxxxxx},
+      eprint={2502.14842},
       archivePrefix={arXiv},
       primaryClass={cs.LG}
 }
