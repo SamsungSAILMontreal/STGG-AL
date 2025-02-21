@@ -18,7 +18,7 @@ You need to get a (free) neptune account and modify the YOUR_API_KEY and YOUR_PR
 
 ### 2. Setting up the directories
 
-You need to change 'CHANGE_TO_YOUR_DIR' to a directory on your computer in src/train_condgenerator.py, src/train_generator.py, src/props/xtb/stda_xtb.py, src/utils/mol_to_coord.py, sTDA-xTB/comp_xtb4stascore.py, sTDA-xTB/mol_to_coord.py, src/experiments/xtb_finetune_active_learning_fosc_IR.sh, src/experiments/xtb_finetune_active_learning_fosc.sh, and , src/experiments/xtb_pretrain.sh.
+You need to change every mention of 'CHANGE_TO_YOUR_DIR' to a directory on your computer in src/train_condgenerator.py, src/train_generator.py, src/props/xtb/stda_xtb.py, src/utils/mol_to_coord.py, sTDA-xTB/comp_xtb4stascore.py, sTDA-xTB/mol_to_coord.py, src/experiments/xtb_finetune_active_learning_fosc_IR.sh, src/experiments/xtb_finetune_active_learning_fosc.sh, and , src/experiments/xtb_pretrain.sh.
 
 ### 3. Setting up the environment
 
@@ -28,8 +28,8 @@ You must install all the requirements below and build the vocabulary and valenci
 ## Make env from scratch (replace 'your_dir' with your directory)
 module load python/3.10 
 module load cuda/11.8
-python -m venv your_dir/molecules_autoregressive
-source your_dir/molecules_autoregressive/bin/activate
+python -m venv CHANGE_TO_YOUR_DIR/stgg_active_learning
+source CHANGE_TO_YOUR_DIR/stgg_active_learning/bin/activate
 pip install --upgrade pip setuptools wheel
 pip install --upgrade --pre torch=2.3.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip install lightning neptune
@@ -42,7 +42,7 @@ cd moses_fixed
 python setup.py install
 
 # install xtb (based on https://hackmd.io/@o_wZpkUYSNeE_lvbb5NqGQ/ryrpH49M5)
-cd your_dir
+cd CHANGE_TO_YOUR_DIR
 wget https://github.com/grimme-lab/xtb/releases/download/v6.7.1/xtb-6.7.1-linux-x86_64.tar.xz
 tar xvf xtb--linux-x86_64.tar.xz
 export PATH=$PATH:your_dir/xtb-dist/bin
@@ -53,7 +53,7 @@ cd xtb4stda/exe
 wget https://github.com/grimme-lab/stda/releases/download/v1.6.3/xtb4stda
 wget https://github.com/grimme-lab/stda/releases/download/v1.6.3/stda_v1.6.3
 chmod +x *
-export XTB4STDAHOME=your_dir/xtb4stda
+export XTB4STDAHOME=CHANGE_TO_YOUR_DIR/xtb4stda
 export PATH=$PATH:$XTB4STDAHOME/exe
 ```
 
@@ -64,7 +64,6 @@ The data can be loaded using pandas in python as follows (make sure that you are
 ```
 import pandas as pd
 df = pd.concat(map(pd.read_csv, sorted(glob.glob("random_generation_stda_xtb_*.csv"))))
-df = df.values
 ```
 
 ## sTDA-xTB (approximation of the absorption wavelength and oscillator strength)
