@@ -3,8 +3,8 @@
 module load python/3.10
 module load cuda/11.8
 
-export PATH=$PATH:$SCRATCH/xtb-dist/bin
-export XTB4STDAHOME=$SCRATCH/xtb4stda
+export PATH=$PATH:CHANGE_TO_YOUR_DIR/xtb-dist/bin
+export XTB4STDAHOME=CHANGE_TO_YOUR_DIR/xtb4stda
 export PATH=$PATH:$XTB4STDAHOME/exe
 
 python data_preprocessing.py --dataset_name xtb --MAX_LEN 700 --limited_properties

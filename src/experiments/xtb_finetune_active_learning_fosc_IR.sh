@@ -13,8 +13,8 @@
 module load python/3.10
 module load cuda/11.8
 
-export PATH=$PATH:$SCRATCH/xtb-dist/bin
-export XTB4STDAHOME=$SCRATCH/xtb4stda
+export PATH=$PATH:CHANGE_TO_YOUR_DIR/xtb-dist/bin
+export XTB4STDAHOME=CHANGE_TO_YOUR_DIR/xtb4stda
 export PATH=$PATH:$XTB4STDAHOME/exe
 
 TORCH_NCCL_BLOCKING_WAIT=0 CUDA_VISIBLE_DEVICES=0 python train_condgenerator.py --dataset_name xtb --num_layers 3 --tag exp_xtb_finetune_IR_f_osc --bf16 \
