@@ -1,6 +1,6 @@
 # STGG+AL: Generating pi-Functional Molecules Using STGG+ with Active Learning
 
-This repo contains the official implementation of the paper [Generating pi-Functional Molecules Using STGG+ with Active Learning](https://arxiv.org/abs/xxxxx). Our method combines STGG+ with active-learning (STGG+AL).
+This repo contains the official implementation of the paper [Generating pi-Functional Molecules Using STGG+ with Active Learning](https://arxiv.org/abs/2502.14842). Our method combines STGG+ with active-learning (STGG+AL).
 
 Our method is based on [STGG+](https://arxiv.org/abs/2407.09357), an improvement over the [original STGG method by Sungsoo Ahn et al (2022)](https://openreview.net/forum?id=w60btE_8T2m). 
 
