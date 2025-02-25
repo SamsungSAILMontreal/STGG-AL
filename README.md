@@ -63,6 +63,7 @@ The dataset is located in resources/data/xtb.
 The data can be loaded using pandas in python as follows (make sure that you are in the resources/data/xtb folder):
 ```
 import pandas as pd
+import glob
 df = pd.concat(map(pd.read_csv, sorted(glob.glob("random_generation_stda_xtb_*.csv"))))
 ```
 
