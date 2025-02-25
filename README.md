@@ -66,6 +66,11 @@ import pandas as pd
 import glob
 df = pd.concat(map(pd.read_csv, sorted(glob.glob("random_generation_stda_xtb_*.csv"))))
 ```
+or you can load it from [HuggingFace](https://huggingface.co/datasets/SamsungSAILMontreal/Conjugated-xTB_2M_molecules):
+```
+from datasets import load_dataset
+dataset = load_dataset('SamsungSAILMontreal/Conjugated-xTB_2M_molecules')
+```
 
 ## sTDA-xTB (approximation of the absorption wavelength and oscillator strength)
 
